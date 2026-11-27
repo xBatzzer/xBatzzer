@@ -1,60 +1,30 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:141E30,100:243B55&height=200&section=header&text=Batzzer&fontSize=50&fontColor=ffffff&animation=fadeIn"/>
+![Batzzer — Gaming & Technology. Full-stack developer and game developer.](./assets/batzzer-forge.svg)
 
-<p align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3500&pause=800&color=58A6FF&center=true&vCenter=true&width=650&lines=Game+Developer;Unity+%7C+C%23;Full+Stack+.NET+Engineer;System+Builder">
-</p>
+I'm Gonzalo, a full-stack developer working with **C#, .NET and databases**. I also build games in **Unity**, where I prototype combat and gameplay systems inspired by RPGs and MMOs.
 
----
+## Games
 
-#  About Me
+[![Play Batzzer's games on itch.io](./assets/games.svg)](https://batzzer.itch.io/)
 
-Full stack developer focused on building robust systems and experimenting with interactive experiences.
+- [Houston, I have no idea](https://batzzer.itch.io/houston-i-have-no-idea) — interactive fiction made for Brackeys Game Jam.
+- [The Hero’s Journey](https://batzzer.itch.io/the-heros-journey) — a platformer with beat ’em up combat.
+- [Quark GameJam No. 2](https://github.com/xBatzzer/Quark-GameJam-N-2) — source code for a C# game jam project.
 
-Professionally I work mainly with **.NET, backend architecture and databases**, and in my free time I enjoy building **gameplay systems and prototypes in Unity**.
+[Watch a gameplay clip](./assets/giftest.gif)
 
----
+## Software & experiments
 
-#  Game Development
+[![Browse Batzzer's code on GitHub](./assets/software.svg)](https://github.com/xBatzzer?tab=repositories)
 
-<p align="center">
-<img src="./assets/giftest.gif" width="800">
-</p>
+- [GoF Design Patterns](https://github.com/xBatzzer/Patrones-de-dise-os-GOF) — design pattern examples in C#.
+- [Pokémon Quiz](https://github.com/xBatzzer/pokemon-quiz) — a quiz built with Angular and TypeScript.
+- [Shadow Duels](https://ocg.batzcraft.com/) — a fan project for card duels and deck building.
 
-I enjoy experimenting with game mechanics, combat systems and prototypes inspired by classic RPG and MMO games.
+## Toolbox
 
-Most of my game development work is done using **Unity and C#**, exploring gameplay systems, combat logic and small experimental projects.
-
----
-
-#  Tech Stack
-
-### Game Development
-
-![Unity](https://img.shields.io/badge/Engine-Unity-black?style=for-the-badge\&logo=unity)
-![C#](https://img.shields.io/badge/Language-CSharp-purple?style=for-the-badge\&logo=csharp)
-
-### Backend / Full Stack
-
-![.NET](https://img.shields.io/badge/.NET-Backend-blue?style=for-the-badge\&logo=dotnet)
-![SQL Server](https://img.shields.io/badge/Database-SQLServer-red?style=for-the-badge\&logo=microsoftsqlserver)
-![Docker](https://img.shields.io/badge/Container-Docker-blue?style=for-the-badge\&logo=docker)
-
-### Tools
-
-![Git](https://img.shields.io/badge/VersionControl-Git-orange?style=for-the-badge\&logo=git)
-
----
-
-#  Contribution Activity
-
-![snake](https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg)
-
----
-
-#  Visitors
-
-![visitors](https://komarev.com/ghpvc/?username=xBatzzer)
-
----
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&section=footer"/>
+| Area | Tools |
+| --- | --- |
+| Game development | Unity · C# · Blender |
+| Backend & data | .NET · SQL Server · Docker |
+| Web | TypeScript · React · Angular · Three.js |
+| Version control | Git |
