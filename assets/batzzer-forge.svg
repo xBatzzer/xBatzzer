@@ -1,21 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="864" height="320" viewBox="0 0 864 320" role="img" aria-labelledby="title desc">
   <title id="title">Batzzer — Gaming &amp; Technology</title>
   <desc id="desc">A glowing sword and anvil surrounded by circuit traces, orbiting runes, and rising sparks. Game development and full-stack engineering.</desc>
-  <style>
-    .orbit { transform-origin: 653px 150px; animation: orbit 24s linear infinite; }
-    .sword { animation: hover 4s ease-in-out infinite; }
-    .ember { animation: rise 3.6s linear infinite; }
-    .ember-b { animation-delay: -1.2s; }
-    .ember-c { animation-delay: -2.4s; }
-    .signal { animation: signal 4s ease-in-out infinite; }
-    @keyframes orbit { to { transform: rotate(360deg); } }
-    @keyframes hover { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-    @keyframes rise { 0% { opacity: 0; transform: translateY(22px); } 20% { opacity: 1; } 80% { opacity: .8; } 100% { opacity: 0; transform: translateY(-30px); } }
-    @keyframes signal { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
-    @media (prefers-reduced-motion: reduce) {
-      .orbit, .sword, .ember, .signal { animation: none; }
-    }
-  </style>
   <defs>
     <linearGradient id="background" x2="1" y2="1">
       <stop stop-color="#100e1b"/><stop offset=".52" stop-color="#181329"/><stop offset="1" stop-color="#23152c"/>
@@ -59,23 +44,29 @@
     <g fill="none" stroke="#b991ec">
       <circle cx="653" cy="150" r="110" stroke-opacity=".31" stroke-dasharray="1 7" stroke-width="2"/>
       <circle cx="653" cy="150" r="95" stroke-opacity=".37"/>
-      <circle cx="653" cy="150" r="80" stroke-opacity=".18" stroke-dasharray="5 8"/>
+      <circle cx="653" cy="150" r="80" stroke-opacity=".18" stroke-dasharray="5 8">
+        <animate attributeName="stroke-dashoffset" from="0" to="-26" dur="3s" repeatCount="indefinite"/>
+      </circle>
       <path d="M543 150h13m194 0h13M653 40v14m0 192v14" stroke-opacity=".7"/>
       <path d="M555 123a102 102 0 0 1 40-57m116 168a102 102 0 0 0 40-57" stroke-width="2" stroke-opacity=".57"/>
       <g class="orbit">
+        <animateTransform attributeName="transform" type="rotate" from="0 653 150" to="360 653 150" dur="12s" repeatCount="indefinite"/>
         <path d="M586 83a95 95 0 0 1 134 0m0 134a95 95 0 0 1-134 0" stroke="#d0a8ff" stroke-opacity=".7" stroke-width="2" stroke-dasharray="43 6 2 6"/>
         <use href="#diamond" x="586" y="83" fill="#d9b2ff" stroke="none"/>
         <use href="#diamond" x="720" y="217" fill="#ffd09e" stroke="none"/>
       </g>
     </g>
 
-    <ellipse class="signal" cx="652" cy="206" rx="84" ry="42" fill="url(#heat)"/>
+    <ellipse class="signal" cx="652" cy="206" rx="84" ry="42" fill="url(#heat)">
+      <animate attributeName="opacity" values=".4;1;.4" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
     <path d="M568 202h155l-17 14h-28l-16 13v11h24v8h-81v-8h24v-11l-19-13h-25Z" fill="url(#steel)" stroke="#a78bbc" stroke-linejoin="round"/>
     <path d="m568 202 20-7h112l23 7Z" fill="url(#pedestal)" stroke="#c5a2d7" stroke-linejoin="round"/>
     <path d="M610 204h85l-18 3h-50Z" fill="#ffb77a" opacity=".83"/>
     <path d="M605 248h81m-68-31 22 12v11m21-13h-16" fill="none" stroke="#816896"/>
 
     <g class="sword">
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" keyTimes="0;.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" calcMode="spline" dur="4s" repeatCount="indefinite"/>
       <g transform="translate(659 138) rotate(34)">
         <path d="M0-77 11-57 10 26 5 41h-10l-5-15-1-83Z" fill="url(#blade)" stroke="#ffe1b1" stroke-linejoin="round"/>
         <path d="M0-70 4-51 4 32 0 38-4 32-4-51Z" fill="#fff4dd"/>
@@ -89,14 +80,28 @@
     </g>
 
     <g fill="#ffd19b" opacity=".65">
-      <g class="ember"><use href="#diamond" x="593" y="162"/><rect x="605" y="183" width="3" height="3"/><rect x="719" y="121" width="3" height="3"/></g>
-      <g class="ember ember-b"><rect x="577" y="185" width="4" height="4"/><use href="#diamond" x="719" y="169"/><rect x="739" y="157" width="3" height="3"/></g>
-      <g class="ember ember-c"><rect x="606" y="129" width="4" height="4"/><rect x="688" y="177" width="4" height="4"/><rect x="722" y="194" width="4" height="4"/></g>
+      <g class="ember">
+        <animateTransform attributeName="transform" type="translate" from="0 22" to="0 -34" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;.9;0" keyTimes="0;.18;.7;1" dur="3s" repeatCount="indefinite"/>
+        <use href="#diamond" x="593" y="162"/><rect x="605" y="183" width="3" height="3"/><rect x="719" y="121" width="3" height="3"/>
+      </g>
+      <g class="ember ember-b">
+        <animateTransform attributeName="transform" type="translate" from="0 22" to="0 -34" dur="3s" begin="-1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;.9;0" keyTimes="0;.18;.7;1" dur="3s" begin="-1s" repeatCount="indefinite"/>
+        <rect x="577" y="185" width="4" height="4"/><use href="#diamond" x="719" y="169"/><rect x="739" y="157" width="3" height="3"/>
+      </g>
+      <g class="ember ember-c">
+        <animateTransform attributeName="transform" type="translate" from="0 22" to="0 -34" dur="3s" begin="-2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;.9;0" keyTimes="0;.18;.7;1" dur="3s" begin="-2s" repeatCount="indefinite"/>
+        <rect x="606" y="129" width="4" height="4"/><rect x="688" y="177" width="4" height="4"/><rect x="722" y="194" width="4" height="4"/>
+      </g>
     </g>
 
     <path d="M28 28h28m-28 0v16m808-16h-28m28 0v16M28 292h28m-28 0v-16m808 16h-28m28 0v-16" fill="none" stroke="#a886b4" stroke-opacity=".58"/>
     <path d="M44 248h351" stroke="#5b476a"/>
-    <path d="M44 248h72" stroke="#d88c69" stroke-width="2"/>
+    <path d="M44 248h351" stroke="#d88c69" stroke-width="2" stroke-dasharray="72 279">
+      <animate attributeName="stroke-dashoffset" from="0" to="-351" dur="4s" repeatCount="indefinite"/>
+    </path>
     <g font-family="Consolas, Menlo, monospace">
       <use href="#diamond" x="49" y="72" fill="#ffc591"/>
       <text x="65" y="78" fill="#ffc591" font-size="18" font-weight="700" letter-spacing="2.2">GAMING &amp; TECHNOLOGY</text>
