@@ -4,7 +4,7 @@
 
 **Full-stack developer · Game developer**
 
-> I build applications with **C#**, **.NET** and **databases**.
+> Full-stack **.NET** development with **C#** and **SQL Server**.
 >
 > In **Unity**, I prototype **combat systems** and **gameplay mechanics** inspired by **RPGs and MMOs**.
 
