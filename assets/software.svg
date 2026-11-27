@@ -1,5 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="864" height="136" viewBox="0 0 864 136" role="img" aria-labelledby="title">
   <title id="title">Code vault — Browse on GitHub</title>
+  <style>
+    .circuit { stroke-dasharray: 12 8; animation: flow 3s linear infinite; }
+    .processor { animation: hover 4s ease-in-out infinite; }
+    .terminal { animation: glow 3s ease-in-out infinite; }
+    .arrow { animation: nudge 3s ease-in-out infinite; }
+    @keyframes flow { to { stroke-dashoffset: -40; } }
+    @keyframes hover { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    @keyframes glow { 0%, 100% { opacity: .65; } 50% { opacity: 1; } }
+    @keyframes nudge { 0%, 100% { transform: translate(0); } 50% { transform: translate(2px, -2px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .circuit, .processor, .terminal, .arrow { animation: none; }
+    }
+  </style>
   <defs>
     <linearGradient id="surface"><stop stop-color="#151123"/><stop offset="1" stop-color="#251e3c"/></linearGradient>
     <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#aa91e5" stroke-opacity=".13"/></pattern>
@@ -9,22 +22,24 @@
     <rect width="864" height="136" fill="url(#surface)"/>
     <path d="M467 0h396v136H467Z" fill="url(#grid)"/>
     <g fill="none" stroke="#b394ef" stroke-opacity=".55" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M484 68h52l31-31h40m-65 51h24l20 20h35m-46-49h31m122 7h27l22-22h25m-77 42h29l19 19h34"/>
+      <path class="circuit" d="M484 68h52l31-31h40m-65 51h24l20 20h35m-46-49h31m122 7h27l22-22h25m-77 42h29l19 19h34"/>
+      <g class="processor">
       <path d="m616 23 10-10h89l11 11v88l-11 11h-89l-10-10Z" fill="#342a55" stroke="#c7a6fb"/>
       <rect x="629" y="28" width="83" height="80" rx="7" fill="#241d40"/>
       <path d="M623 39h-17m17 15h-17m17 15h-17m17 15h-17m17 15h-17m117-60h17m-17 15h17m-17 15h17m-17 15h17m-17 15h17" stroke-width="2"/>
       <path d="M660 53l-14 15 14 15m22-30 14 15-14 15m-7-33-8 36" stroke="#d8bbff" stroke-width="2.5"/>
+      </g>
       <circle cx="484" cy="68" r="3" fill="#251e3c"/><circle cx="542" cy="88" r="3" fill="#251e3c"/><circle cx="575" cy="59" r="3" fill="#251e3c"/>
     </g>
     <rect x="32" y="40" width="56" height="56" rx="12" fill="#302449" stroke="#8972ba"/>
     <g fill="none" stroke="#dfc9ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
       <rect x="43" y="55" width="34" height="26" rx="4"/>
-      <path d="m50 63 5 5-5 5m12 0h8"/>
+      <path class="terminal" d="m50 63 5 5-5 5m12 0h8"/>
     </g>
     <text x="111" y="64" fill="#f6efff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="750">Code vault</text>
     <text x="113" y="98" fill="#dcc5fb" font-family="Consolas, Menlo, monospace" font-size="24" font-weight="700">Browse on GitHub</text>
     <rect x="794" y="44" width="48" height="48" rx="11" fill="#211934" stroke="#9379c3"/>
-    <path d="M810 76l16-16m-13 0h13v13" fill="none" stroke="#dfc9ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="arrow" d="M810 76l16-16m-13 0h13v13" fill="none" stroke="#dfc9ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
   <rect x="1" y="1" width="862" height="134" rx="15" fill="none" stroke="#716090" stroke-width="2"/>
 </svg>

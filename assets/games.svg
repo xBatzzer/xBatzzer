@@ -1,5 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="864" height="136" viewBox="0 0 864 136" role="img" aria-labelledby="title">
   <title id="title">Game library — Play on itch.io</title>
+  <style>
+    .stars { animation: twinkle 3.5s ease-in-out infinite; }
+    .cross-stars { animation: twinkle 4.5s -2s ease-in-out infinite; }
+    .sun { animation: glow 5s ease-in-out infinite; }
+    .controller { animation: hover 4s ease-in-out infinite; }
+    .arrow { animation: nudge 3s ease-in-out infinite; }
+    @keyframes twinkle { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
+    @keyframes glow { 0%, 100% { opacity: .2; } 50% { opacity: .4; } }
+    @keyframes hover { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    @keyframes nudge { 0%, 100% { transform: translate(0); } 50% { transform: translate(2px, -2px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .stars, .cross-stars, .sun, .controller, .arrow { animation: none; }
+    }
+  </style>
   <defs>
     <linearGradient id="surface"><stop stop-color="#171020"/><stop offset="1" stop-color="#301b2c"/></linearGradient>
     <linearGradient id="mountains" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9b526c"/><stop offset="1" stop-color="#342037"/></linearGradient>
@@ -7,21 +21,21 @@
   </defs>
   <g clip-path="url(#bounds)">
     <rect width="864" height="136" fill="url(#surface)"/>
-    <circle cx="690" cy="71" r="46" fill="#e99a77" opacity=".25"/>
+    <circle class="sun" cx="690" cy="71" r="46" fill="#e99a77" opacity=".25"/>
     <path d="M644 71h92m-90 10h88m-84 10h80m-73 10h66" fill="none" stroke="#eda583" stroke-opacity=".56"/>
     <path d="M488 135v-13h22v-13h22V96h21V83h22V70h22v13h22v13h22v13h22v13h22v13Zm164 0v-12h17v-12h17V99h17V87h17V75h17V63h17v12h17v12h17v12h17v12h17v12h20v12Z" fill="url(#mountains)"/>
     <path d="M448 136v-11h28v-9h20v-8h28v8h22v8h30v12Zm269 0v-8h23v-9h22v-8h22v-9h20v9h20v8h22v9h18v8Z" fill="#1e142b"/>
-    <path d="M525 36h4v4h-4zm81 7h4v4h-4zm35-19h3v3h-3zm121 15h3v3h-3z" fill="#fbc59b"/>
-    <path d="M575 51h12m-6-6v12m191-6h12m-6-6v12" stroke="#c997d7" stroke-opacity=".82"/>
+    <path class="stars" d="M525 36h4v4h-4zm81 7h4v4h-4zm35-19h3v3h-3zm121 15h3v3h-3z" fill="#fbc59b"/>
+    <path class="cross-stars" d="M575 51h12m-6-6v12m191-6h12m-6-6v12" stroke="#c997d7" stroke-opacity=".82"/>
     <rect x="32" y="40" width="56" height="56" rx="12" fill="#3b232f" stroke="#a26969"/>
-    <g fill="none" stroke="#ffca9a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <g class="controller" fill="none" stroke="#ffca9a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
       <path d="M51 57h18a7 7 0 0 1 7 5l4 11c2 6-3 10-7 6l-5-5H52l-5 5c-4 4-9 0-7-6l4-11a7 7 0 0 1 7-5Z"/>
       <path d="M48 65h10m-5-5v10m15-4h.1m5 4h.1"/>
     </g>
     <text x="111" y="64" fill="#fff0e5" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="750">Game library</text>
     <text x="113" y="98" fill="#f9c7a7" font-family="Consolas, Menlo, monospace" font-size="24" font-weight="700">Play on itch.io</text>
     <rect x="794" y="44" width="48" height="48" rx="11" fill="#241629" stroke="#ad756f"/>
-    <path d="M810 76l16-16m-13 0h13v13" fill="none" stroke="#ffca9a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="arrow" d="M810 76l16-16m-13 0h13v13" fill="none" stroke="#ffca9a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
   <rect x="1" y="1" width="862" height="134" rx="15" fill="none" stroke="#855d72" stroke-width="2"/>
 </svg>

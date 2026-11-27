@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="864" height="260" viewBox="0 0 864 260" role="img" aria-labelledby="title desc">
+  <title id="title">Shadow Duels — Enter the arena</title>
+  <desc id="desc">Batzzer's fan project for card duels and deck building. Three floating cards emerge from a glowing violet portal. Open Shadow Duels.</desc>
+  <style>
+    .portal { transform-origin: 675px 132px; animation: orbit 28s linear infinite; }
+    .portal-inner { transform-origin: 675px 132px; animation: orbit 38s linear infinite reverse; }
+    .card-left { animation: hover 5s -1s ease-in-out infinite; }
+    .card-right { animation: hover 6s -3s ease-in-out infinite; }
+    .card-front { animation: hover 4.5s ease-in-out infinite; }
+    .aura { animation: breathe 4.5s ease-in-out infinite; }
+    .particles { animation: rise 5s linear infinite; }
+    .particles-b { animation-delay: -2.5s; }
+    .cta-arrow { animation: nudge 3s ease-in-out infinite; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes hover { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+    @keyframes breathe { 0%, 100% { opacity: .45; } 50% { opacity: .85; } }
+    @keyframes rise { 0% { opacity: 0; transform: translateY(14px); } 20%, 65% { opacity: .8; } 100% { opacity: 0; transform: translateY(-30px); } }
+    @keyframes nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .portal, .portal-inner, .card-left, .card-right, .card-front, .aura, .particles, .cta-arrow { animation: none; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#151021"/><stop offset=".55" stop-color="#21142f"/><stop offset="1" stop-color="#301c48"/></linearGradient>
+    <linearGradient id="border" x2="1"><stop stop-color="#9670b3"/><stop offset=".5" stop-color="#5b3f7c"/><stop offset="1" stop-color="#ac7ccc"/></linearGradient>
+    <radialGradient id="haze"><stop stop-color="#a24de0" stop-opacity=".5"/><stop offset="1" stop-color="#a24de0" stop-opacity="0"/></radialGradient>
+    <radialGradient id="portal-halo"><stop offset=".3" stop-color="#c68dff" stop-opacity="0"/><stop offset=".66" stop-color="#c68dff" stop-opacity=".28"/><stop offset="1" stop-color="#c68dff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="back" x2="1" y2="1"><stop stop-color="#432d63"/><stop offset="1" stop-color="#19152c"/></linearGradient>
+    <linearGradient id="face" x2="1" y2="1"><stop stop-color="#dbc1f0"/><stop offset=".4" stop-color="#8a63b5"/><stop offset="1" stop-color="#493968"/></linearGradient>
+    <linearGradient id="art" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#20283e"/><stop offset="1" stop-color="#3f275c"/></linearGradient>
+    <linearGradient id="gem" x2="1" y2="1"><stop stop-color="#c3fff5"/><stop offset=".4" stop-color="#84d8dc"/><stop offset="1" stop-color="#6871ba"/></linearGradient>
+    <clipPath id="bounds"><rect x="1" y="1" width="862" height="258" rx="19"/></clipPath>
+  </defs>
+  <g clip-path="url(#bounds)">
+    <rect width="864" height="260" fill="url(#surface)"/>
+    <ellipse cx="678" cy="134" rx="239" ry="191" fill="url(#haze)"/>
+    <path d="M489 33v194" stroke="#bc94d9" stroke-opacity=".2"/>
+    <path d="M501 224h329m-303 10h281m-209-10-15 15m57-15-5 15m48-15 6 15m36-15 18 15" fill="none" stroke="#b38bd3" stroke-opacity=".2"/>
+    <ellipse cx="675" cy="224" rx="99" ry="18" fill="#ae68e8" opacity=".16"/>
+    <circle class="aura" cx="675" cy="132" r="115" fill="url(#portal-halo)"/>
+    <g class="portal" fill="none" stroke="#c297ec">
+      <circle cx="675" cy="132" r="100" stroke-opacity=".24"/>
+      <circle cx="675" cy="132" r="94" stroke-opacity=".6" stroke-dasharray="92 9 3 9"/>
+      <path d="m675 29 6 9-6 9-6-9Zm103 103-9 6-9-6 9-6Zm-103 103-6-9 6-9 6 9ZM572 132l9-6 9 6-9 6Z" fill="#cca4ef" stroke="none"/>
+    </g>
+    <g class="portal-inner" fill="none" stroke="#87d8db" stroke-opacity=".52">
+      <circle cx="675" cy="132" r="78" stroke-dasharray="2 10"/>
+      <path d="M600 106a80 80 0 0 1 49-49m101 101a80 80 0 0 1-49 49" stroke-width="2"/>
+    </g>
+    <g class="card-left">
+      <g transform="translate(622 137) rotate(-20)">
+        <rect x="-43" y="-66" width="86" height="132" rx="7" fill="url(#back)" stroke="#b799cf" stroke-width="1.5"/>
+        <rect x="-36" y="-59" width="72" height="118" rx="4" fill="none" stroke="#9b78b9" stroke-opacity=".65"/>
+        <path d="m0-42 27 42L0 42-27 0Zm0 14L17 0 0 28-17 0Z" fill="none" stroke="#cca1eb" stroke-opacity=".7"/>
+        <circle r="10" fill="#6b4c8c" stroke="#d3b5e9"/>
+        <path d="M-27-48h12m30 96h12" stroke="#dac2ed"/>
+      </g>
+    </g>
+    <g class="card-right">
+      <g transform="translate(728 139) rotate(19)">
+        <rect x="-43" y="-66" width="86" height="132" rx="7" fill="url(#back)" stroke="#b799cf" stroke-width="1.5"/>
+        <rect x="-36" y="-59" width="72" height="118" rx="4" fill="none" stroke="#9b78b9" stroke-opacity=".65"/>
+        <path d="m0-42 27 42L0 42-27 0Zm0 14L17 0 0 28-17 0Z" fill="none" stroke="#cca1eb" stroke-opacity=".7"/>
+        <circle r="10" fill="#6b4c8c" stroke="#d3b5e9"/>
+        <path d="M-27-48h12m30 96h12" stroke="#dac2ed"/>
+      </g>
+    </g>
+    <g class="card-front">
+      <g transform="translate(675 129) rotate(-4)">
+        <rect x="-44" y="-70" width="88" height="140" rx="7" fill="#100f21" opacity=".5" transform="translate(5 7)"/>
+        <rect x="-44" y="-70" width="88" height="140" rx="7" fill="url(#face)" stroke="#e9d6fc" stroke-width="1.7"/>
+        <rect x="-36" y="-61" width="72" height="12" rx="2" fill="#241c37"/>
+        <path d="M-29-55h39m5 0h9" stroke="#e5d2f6" stroke-width="2"/>
+        <rect x="-35" y="-42" width="70" height="69" rx="3" fill="url(#art)" stroke="#dfc6f2" stroke-opacity=".6"/>
+        <circle cx="0" cy="-8" r="22" fill="none" stroke="#92dee3" stroke-opacity=".5"/>
+        <path d="m0-34 17 26L0 19-17-8Z" fill="url(#gem)" stroke="#d4fff5" stroke-width="1.2"/>
+        <path d="M0-34V19m-17-27H17M0-20-9-8 0 5 9-8Z" fill="none" stroke="#e0fff9" stroke-opacity=".65"/>
+        <path d="m-28 15 7-7m42-31 7-7" stroke="#c3fff1" stroke-width="2"/>
+        <rect x="-35" y="35" width="70" height="25" rx="3" fill="#292039"/>
+        <path d="M-28 43h53m-53 6h45m-45 6h24" stroke="#d6b9ea" stroke-width="2" stroke-opacity=".8"/>
+      </g>
+    </g>
+    <g class="particles" fill="#beefe8">
+      <path d="m559 88 3-4 3 4-3 4Zm216 101 3-4 3 4-3 4Z"/>
+      <circle cx="801" cy="106" r="1.6"/><circle cx="579" cy="201" r="1.5"/>
+    </g>
+    <g class="particles particles-b" fill="#e3b2f7">
+      <circle cx="601" cy="52" r="2"/><circle cx="756" cy="56" r="1.8"/><circle cx="811" cy="191" r="1.5"/>
+      <path d="m539 150 3-4 3 4-3 4Z"/>
+    </g>
+    <g font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      <text x="40" y="102" fill="#fbf0ff" font-size="54" font-weight="800" letter-spacing="-1.5">Shadow Duels</text>
+      <text x="42" y="139" fill="#decee9" font-size="24">Card duels &amp; deck building</text>
+    </g>
+    <text x="42" y="43" fill="#d7b2f4" font-family="Consolas, Menlo, monospace" font-size="16" font-weight="700" letter-spacing="2.4">CARD GAME PROJECT</text>
+    <rect x="42" y="178" width="270" height="49" rx="9" fill="#b597df"/>
+    <text x="60" y="209" fill="#21162f" font-family="Consolas, Menlo, monospace" font-size="18" font-weight="700" letter-spacing=".5">ENTER THE ARENA</text>
+    <path class="cta-arrow" d="M276 203h15m-6-6 6 6-6 6" fill="none" stroke="#21162f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="819" y="235" text-anchor="end" fill="#cfb4e3" font-family="Consolas, Menlo, monospace" font-size="13" letter-spacing="1.7">BY BATZZER</text>
+    <path d="M22 27v-5h19m801 5v-5h-19M22 233v5h19" fill="none" stroke="#c19cd8" stroke-opacity=".6"/>
+  </g>
+  <rect x="1" y="1" width="862" height="258" rx="19" fill="none" stroke="url(#border)" stroke-width="2"/>
+</svg>

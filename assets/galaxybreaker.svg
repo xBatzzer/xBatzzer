@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="864" height="260" viewBox="0 0 864 260" role="img" aria-labelledby="title desc">
+  <title id="title">GalaxyBreaker — Get it on Google Play</title>
+  <desc id="desc">Batzzer's Android game. An animated blue planet with orbiting fragments and a Google Play download badge. Open the game on Google Play.</desc>
+  <style>
+    .planet { animation: hover 6s ease-in-out infinite; }
+    .orbit { transform-origin: 674px 129px; animation: orbit 30s linear infinite; }
+    .orbit-back { transform-origin: 674px 129px; animation: orbit 44s linear infinite reverse; }
+    .stars { animation: twinkle 4s ease-in-out infinite; }
+    .stars-b { animation-delay: -2s; }
+    .atmosphere { animation: breathe 5s ease-in-out infinite; }
+    .play-badge { animation: hover-badge 5s ease-in-out infinite; }
+    .meteor { animation: meteor 6s linear infinite; }
+    @keyframes hover { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes twinkle { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
+    @keyframes breathe { 0%, 100% { opacity: .5; } 50% { opacity: .9; } }
+    @keyframes hover-badge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+    @keyframes meteor { 0%, 100% { opacity: 0; transform: translate(0); } 12% { opacity: .8; } 50%, 99% { opacity: 0; transform: translate(-92px, 47px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .planet, .orbit, .orbit-back, .stars, .atmosphere, .play-badge, .meteor { animation: none; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#10121f"/><stop offset=".6" stop-color="#111c35"/><stop offset="1" stop-color="#1e2245"/></linearGradient>
+    <linearGradient id="border" x2="1"><stop stop-color="#98715d"/><stop offset=".48" stop-color="#344d76"/><stop offset="1" stop-color="#6d86ad"/></linearGradient>
+    <radialGradient id="nebula"><stop stop-color="#407aca" stop-opacity=".5"/><stop offset="1" stop-color="#407aca" stop-opacity="0"/></radialGradient>
+    <radialGradient id="halo"><stop offset=".5" stop-color="#70d9f9" stop-opacity="0"/><stop offset=".76" stop-color="#70d9f9" stop-opacity=".23"/><stop offset="1" stop-color="#70d9f9" stop-opacity="0"/></radialGradient>
+    <radialGradient id="planet" cx=".28" cy=".22" r=".85"><stop stop-color="#93edff"/><stop offset=".32" stop-color="#408fc3"/><stop offset=".7" stop-color="#285584"/><stop offset="1" stop-color="#15253e"/></radialGradient>
+    <linearGradient id="ring"><stop stop-color="#f5bb8d" stop-opacity=".2"/><stop offset=".5" stop-color="#ffe0ac"/><stop offset="1" stop-color="#b78bd9" stop-opacity=".5"/></linearGradient>
+    <linearGradient id="meteor"><stop stop-color="#9cceff" stop-opacity="0"/><stop offset="1" stop-color="#e8f9ff"/></linearGradient>
+    <clipPath id="bounds"><rect x="1" y="1" width="862" height="258" rx="19"/></clipPath>
+    <clipPath id="planet-bounds"><circle cx="674" cy="129" r="53"/></clipPath>
+    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#8fa4cf" stroke-opacity=".11"/></pattern>
+  </defs>
+  <g clip-path="url(#bounds)">
+    <rect width="864" height="260" fill="url(#surface)"/>
+    <ellipse cx="684" cy="128" rx="244" ry="194" fill="url(#nebula)"/>
+    <path d="M500 0h364v260H500Z" fill="url(#grid)"/>
+    <path d="M489 33v194" stroke="#8ca4c9" stroke-opacity=".18"/>
+    <g class="stars" fill="#d4e8ff">
+      <circle cx="540" cy="45" r="1.7"/><circle cx="774" cy="43" r="1.4"/><circle cx="812" cy="160" r="1.6"/><circle cx="551" cy="178" r="1.5"/>
+      <path d="M808 68h10m-5-5v10M569 111h8m-4-4v8" fill="none" stroke="#c9edff"/>
+    </g>
+    <g class="stars stars-b" fill="#f7cbab">
+      <circle cx="612" cy="23" r="1.3"/><circle cx="827" cy="219" r="1.3"/><circle cx="759" cy="205" r="1.6"/><circle cx="545" cy="228" r="1.6"/>
+      <path d="m777 103 3-3 3 3-3 3Z"/>
+    </g>
+    <path class="meteor" d="m746 34 64-32" stroke="url(#meteor)" stroke-width="2" stroke-linecap="round"/>
+    <circle class="atmosphere" cx="674" cy="129" r="100" fill="url(#halo)"/>
+    <circle cx="674" cy="129" r="103" fill="none" stroke="#7ba6e0" stroke-opacity=".27" stroke-dasharray="1 7" stroke-width="2"/>
+    <g class="orbit-back" fill="none" stroke="#8fb4df" stroke-opacity=".42">
+      <path d="M587 79a100 100 0 0 1 87-50m87 150a100 100 0 0 1-87 50"/>
+      <path d="m582 89 7-6 8 8-6 7Z" fill="#314e74" stroke="#9ed3f3"/>
+      <path d="m751 183 10 2-3 10-10-4Z" fill="#614b69" stroke="#ddbadf"/>
+    </g>
+    <g class="planet">
+      <ellipse cx="674" cy="129" rx="91" ry="24" transform="rotate(-27 674 129)" fill="none" stroke="url(#ring)" stroke-width="4"/>
+      <circle cx="674" cy="129" r="53" fill="url(#planet)" stroke="#8ccff2" stroke-opacity=".6"/>
+      <g clip-path="url(#planet-bounds)" fill="none" stroke-linecap="round">
+        <path d="M626 109q28-22 59-5t38-4m-103 37q29-16 58-3t47-8m-96 31q34-10 57 0t36-4" stroke="#99d9e8" stroke-opacity=".23" stroke-width="8"/>
+        <path d="M639 87q19-9 36-5m-46 33q22-10 42 0m-23 31q32-4 53 8" stroke="#c9f6ff" stroke-opacity=".35" stroke-width="2"/>
+        <ellipse cx="706" cy="150" rx="38" ry="63" fill="#091a33" opacity=".24"/>
+      </g>
+      <path d="M594 159q43 24 122-13t33-46" fill="none" stroke="url(#ring)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M602 164q43 17 105-10" fill="none" stroke="#fff0d4" stroke-opacity=".7" stroke-width="1.3"/>
+    </g>
+    <g class="orbit">
+      <path d="m674 23 5 9-5 9-5-9Z" fill="#ffcf9b"/>
+      <circle cx="674" cy="226" r="3" fill="#a2dffb"/>
+      <path d="m763 77 8 3-2 7-9-3Z" fill="#77648e" stroke="#cdb0e8"/>
+    </g>
+    <g font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      <text x="40" y="102" fill="#fff3e9" font-size="54" font-weight="800" letter-spacing="-1.8">GalaxyBreaker</text>
+      <text x="42" y="139" fill="#cfdaec" font-size="24">My Android game</text>
+    </g>
+    <text x="42" y="43" fill="#ffcb9d" font-family="Consolas, Menlo, monospace" font-size="16" font-weight="700" letter-spacing="2.4">ANDROID GAME</text>
+    <g class="play-badge">
+      <image x="22" y="149" width="300" height="116.1" href="data:image/png;base64,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"/>
+    </g>
+    <path d="M348 211h31m-8-8 8 8-8 8" fill="none" stroke="#ffcf9b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="819" y="235" text-anchor="end" fill="#b3c6e5" font-family="Consolas, Menlo, monospace" font-size="13" letter-spacing="1.7">BY BATZZER</text>
+    <path d="M22 27v-5h19m801 5v-5h-19M22 233v5h19" fill="none" stroke="#c2a68d" stroke-opacity=".6"/>
+  </g>
+  <rect x="1" y="1" width="862" height="258" rx="19" fill="none" stroke="url(#border)" stroke-width="2"/>
+</svg>
